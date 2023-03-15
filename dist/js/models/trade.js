@@ -1,11 +1,12 @@
 export class Trade {
-    constructor(date, quantity, value) {
-        this._date = date;
-        this._quantity = quantity;
-        this._value = value;
+    constructor(_date, _quantity, _value) {
+        this._date = _date;
+        this._quantity = _quantity;
+        this._value = _value;
     }
     get date() {
-        return this._date;
+        const data = new Date(this._date.getTime());
+        return data;
     }
     get quantity() {
         return this._quantity;
